@@ -10,56 +10,7 @@
 	http://www.springframework.org/schema/context/spring-context-3.0.xsd
 	http://www.springframework.org/schema/aop     
     http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
-    <context:annotation-config/>
-    <bean id = "xishou" class = "Spring.Di.Xishou"></bean>
-    <bean id = "MamaSay" class = "Spring.Di.Set.MamaSay"></bean>
     
-   <!-- 默认构造方法bean -->
-   <!--  <bean id = "juggler" class = "Spring.Di.Juggler"></bean> -->
-    
-   <!--  带int 的构造方法 构造注入 -->
-	<bean id="juggler" class="Spring.Di.Juggler">
-		<property name="d" value="11"></property>
-<!-- 		<constructor-arg value="15"></constructor-arg>
-     	<constructor-arg ref="xishou" /> 
-		<constructor-arg>
-			<bean class="Spring.Di.Xishou"></bean>
-		</constructor-arg> -->
- </bean>
-
-<!-- set注入 以及内部bean -->
-<!--  	<bean id="chi" class="Spring.Di.Set.ChiBaoZi">
-		<property name="n" value="${zyf.count}"></property>
-		<property name="xian" value="猪肉馅"></property>
-		<property name="xishou" ref="xishou"></property>
-		<property name="MamaSay">
-			<bean class="Spring.Di.Set.MamaSay"></bean>
-		</property>
-	</bean>  -->
-	
-	<!-- p装配属性 -->
-	<!-- 	<bean id="chi" class="Spring.Di.Set.ChiBaoZi" 
-		p:n="${zyf.count}"  
-		p:xian="猪肉馅"  
-		p:MamaSay-ref="MamaSay"
-		p:xishou-ref="xishou"
-		>	   -->
-		
-<!--  装配map  before随便取名，代码中解析map拿到bean ,属性n和xuan直接写入map entry失败？-->
-	<!--  <bean id="chi" class="Spring.Di.Set.ChiBaoZi"  p:n="5" 
-		p:xian="猪肉馅"  >
-		<property name="before">
-			<map>
-			<entry key="MamaSay" value-ref="MamaSay"></entry>
-			<entry key="xishou" value-ref="xishou"></entry>
-			</map>
-		</property>  -->
-		<!-- 	spEL 引用的参数 d 要生成getD方法-->
-<!-- 	<property name="m" value="#{T(java.lang.Math).PI}"></property>
-	<property name="m" value="#{T(java.lang.Math).random()}"></property> 
-	<property name="m" value="#{10}"></property>
-	</bean> -->
-	<bean id="chi" class="Spring.Di.Set.ChiBaoZi"  p:n="5" 
-		p:xian="猪肉馅"  />
+    <bean id = "juggler" class = "Spring.Di.Juggler"></bean>
 	
     </beans>
