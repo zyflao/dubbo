@@ -1,10 +1,37 @@
 package Spring.Util;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.apache.commons.codec.binary.StringUtils;
 
 
 
-public class zyfStringUtil {
+public class ZyfStringUtil {
+	private  String mobile;
+	private  String idcard;
+	
+	
+public String getMobile() {
+		return mobile;
+	}
+
+
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
+	}
+
+
+	public String getIdcard() {
+		return idcard;
+	}
+
+
+	public void setIdcard(String idcard) {
+		this.idcard = idcard;
+	}
+
+
 public static void main(String[] args) {
 	String s = "rwin_616342_730938";
 	String acountid = s.split("_")[2];
@@ -30,5 +57,16 @@ public static void main(String[] args) {
 	int p = Integer.parseInt(positionStr) + concludescount;
 	positionStr = String.valueOf(p);
 	System.out.println(positionStr);
+	
+	String regex="^[a-zA-Z0-9]{6}$";
+	Pattern pattern = Pattern.compile(regex);
+	Matcher matcher = pattern.matcher("123");
+	System.out.println(matcher.matches());
+	
+	ZyfStringUtil zyf =new ZyfStringUtil(); 
+	zyf.setIdcard(null);
+	zyf.getIdcard();
+	System.out.println(zyf.getIdcard());
+	
 }
 }

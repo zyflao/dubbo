@@ -29,13 +29,13 @@
 
 <!-- set注入 以及内部bean -->
 <!--  	<bean id="chi" class="Spring.Di.Set.ChiBaoZi">
-		<property name="n" value="${zyf.count}"></property>
+	 	<property name="n" value="5"></property>
 		<property name="xian" value="猪肉馅"></property>
 		<property name="xishou" ref="xishou"></property>
 		<property name="MamaSay">
 			<bean class="Spring.Di.Set.MamaSay"></bean>
-		</property>
-	</bean>  -->
+		</property> 
+	</bean>   -->
 	
 	<!-- p装配属性 -->
 	<!-- 	<bean id="chi" class="Spring.Di.Set.ChiBaoZi" 
@@ -59,7 +59,7 @@
 	<property name="m" value="#{T(java.lang.Math).random()}"></property> 
 	<property name="m" value="#{10}"></property>
 	</bean> -->
-	<bean id="chi" class="Spring.Di.Set.ChiBaoZi"  p:n="5" 
+	<bean id="chi" class="Spring.Di.Set.ChiBaoZi"  p:n="5"
 		p:xian="猪肉馅"  />
 	
     </beans>
