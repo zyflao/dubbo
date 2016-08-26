@@ -44,8 +44,9 @@ public class DateTest {
 	}
 
 	public static void main(String[] args) throws ParseException {
-		SimpleDateFormat sdf = new SimpleDateFormat("HHmmss");
-		sdf.format(new Date());
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		System.out.println(sdf.format(new Date()));
+		
 		String now = DateUtil.format(new java.util.Date(1464672388277L),
 				"yyyyMMdd HHmmss");
 		String now1 = DateUtil.format(new java.util.Date(1464671858123L),

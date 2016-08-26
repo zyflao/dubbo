@@ -12,7 +12,7 @@
     http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
 	
 	<import resource="classpath:spring/spring-dao.xml" />
-	
+	<import resource="classpath:spring/spring-aop.xml" />
 	<bean id="placeholderConfig"
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="location">
