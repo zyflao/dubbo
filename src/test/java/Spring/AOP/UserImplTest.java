@@ -9,7 +9,7 @@ public class UserImplTest {
 public static void main(String[] args) {
 	ApplicationContext context = new ClassPathXmlApplicationContext(
 			"classpath*:test-spring-app.xml");
-	UserApi j = (UserApi) context.getBean("userImpl");
+	UserApi j = (UserApi) context.getBean("user");
 	j.findUser("zyf");
 }
 }

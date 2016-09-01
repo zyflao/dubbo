@@ -11,22 +11,22 @@
 	http://www.springframework.org/schema/aop     
     http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
       <bean id="audience" class="Spring.AOP.Audience" />
-<aop:config>
-        <aop:aspect ref="audience"><!-- 引用audience Bean -->
-            <!-- 声明切入点 -->
+<!-- <aop:config>
+        <aop:aspect ref="audience">引用audience Bean
+            声明切入点
             <aop:pointcut id="performance"
                 expression="execution(* Spring.AOP.Performer.perform(..))" />
-            <!-- 表演之前 -->
+            表演之前
             <aop:before pointcut-ref="performance" method="takeSeats" />
             <aop:before pointcut-ref="performance" method="turnOffCellPhones" />
-            <!-- 表演之后 -->
+            表演之后
             <aop:after-returning pointcut-ref="performance"
                 method="applaud" />
-            <!-- 表演失败之后 -->
+            表演失败之后
             <aop:after-throwing pointcut-ref="performance"
                 method="demandRefund" />
         </aop:aspect>
-    </aop:config>
+    </aop:config> -->
     
      <aop:aspectj-autoproxy/>  
     <bean id="user" class="Spring.AOP.UserImpl"/>  
