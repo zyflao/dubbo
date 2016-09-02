@@ -29,7 +29,7 @@ public class UserImpl implements UserApi{
 
 		public String findUser(String username) {
 			init();
-			String password = "没查到该用户";
+			String password = "密码错误";
 			if(map.containsKey(username)){
 				password = map.get(username).toString();
 			}
