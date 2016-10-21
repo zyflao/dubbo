@@ -7,6 +7,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
+import com.jrj.common.utils.DateUtil;
+
 
 class A {
 	String a;
@@ -46,7 +48,7 @@ public class DateTest {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		System.out.println(sdf.format(new Date()));
 		
-		String now = DateUtil.format(new java.util.Date(1464672388277L),
+		String now = DateUtil.format(new java.util.Date(1473987631000L),
 				"yyyyMMdd HHmmss");
 		String now1 = DateUtil.format(new java.util.Date(1464671858123L),
 				"yyyyMMdd HHmmss");
@@ -67,7 +69,7 @@ public class DateTest {
 		// System.out.println(sdf.parse("20160315")+","+sdf.parse("20160215")+",d:"+sdf.format(new
 		// Date()));
 		// System.out.println(sdf.format(new Date()));
-		// System.out.println(now);
+		 System.out.println("now:"+now);
 		// System.out.println(now1);
 		// System.out.println(now2);
 		// System.out.println(now3);
